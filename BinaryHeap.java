@@ -64,14 +64,17 @@ public class BinaryHeap {
 		}
 	}
 
+	/* this method checks if the current position item is a leaf */
 	private boolean isLeaf(int pos){
 		return ((pos >= (size) / 2) && (pos < size));
 	}
 
+	/* this method grows the Array if necessary */
 	private void growArray(){
 		data = Arrays.copyOf(data, data.length * 2);
 	}
 
+	/* this function swaps items at given positions */
 	private void swap(int[] a, int i, int j){
 		int temp = a[i];
 		a[i] = a[j];
